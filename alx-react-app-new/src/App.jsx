@@ -29,6 +29,17 @@ return (
         bio="Loves hiking and photography" 
       />
     </div>
+
+    
+  );
+
+    return (
+    <div>
+      <Header />
+      <UserProfile name="Alice" age="25" bio="Loves hiking and photography" />
+      <MainContent />
+      <Footer />
+    </div>
   );
 
 export default App;
