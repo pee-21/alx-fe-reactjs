@@ -1,11 +1,11 @@
-const UserProfile = (props) => {
+function MainContent() {
   return (
-    <div style={{ border: '1px solid gray', padding: '15px', margin: '15px', borderRadius: '8px', backgroundColor: '#f9f9f9' }}>
-      <h2 style={{ color: 'blue', marginBottom: '8px' }}>{props.name}</h2>
-      <p>Age: <span style={{ fontWeight: 'bold', color: 'darkgreen' }}>{props.age}</span></p>
-      <p>Bio: <em>{props.bio}</em></p>
-    </div>
+    <main style={{ padding: '20px', backgroundColor: '#eef' }}>
+      <p style={{ fontSize: '18px' }}>
+        I love to visit New York, Paris, and Tokyo.
+      </p>
+    </main>
   );
-};
+}
 
-export default UserProfile;
+export default MainContent;
