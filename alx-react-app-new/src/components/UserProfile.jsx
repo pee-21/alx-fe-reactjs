@@ -1,11 +1,9 @@
-const UserProfile = (props) => {
+function Footer() {
   return (
-    <div style={{ border: '1px solid gray', padding: '15px', margin: '15px', borderRadius: '8px', backgroundColor: '#f9f9f9' }}>
-      <h2 style={{ color: 'blue', marginBottom: '8px' }}>{props.name}</h2>
-      <p>Age: <span style={{ fontWeight: 'bold', color: 'darkgreen' }}>{props.age}</span></p>
-      <p>Bio: <em>{props.bio}</em></p>
-    </div>
+    <footer style={{ backgroundColor: '#222', color: 'white', textAlign: 'center', padding: '10px', marginTop: '20px' }}>
+      <p>© 2023 City Lovers</p>
+    </footer>
   );
-};
+}
 
-export default UserProfile;
+export default Footer;
