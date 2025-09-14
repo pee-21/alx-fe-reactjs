@@ -1,34 +1,22 @@
-import WelcomeMessage from './components/WelcomeMessage';
-import Header from './Header';
-import MainContent from './MainContent';
-import Footer from './Footer';
-import UserProfile from './components/UserProfile';
-
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './Home';
+import About from './About';
+import Services from './Services';
+import Contact from './Contact';
+import Navbar from './Navbar';
 
 function App() {
   return (
-    <div>
-      <WelcomeMessage />
-    </div>
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </Router>
   );
 }
-
-return (
-    <div>
-      <Header />
-      <MainContent />
-      <Footer />
-    </div>
-  );
-
-   return (
-    <div>
-      <UserProfile 
-        name="Alice" 
-        age="25" 
-        bio="Loves hiking and photography" 
-      />
-    </div>
-  );
 
 export default App;
