@@ -1,34 +1,14 @@
-import WelcomeMessage from './components/WelcomeMessage';
-import Header from './Header';
-import MainContent from './MainContent';
-import Footer from './Footer';
-import UserProfile from './components/UserProfile';
-
+import AddRecipeForm from './components/AddRecipeForm';
+import RecipeList from './components/RecipeList';
 
 function App() {
   return (
-    <div>
-      <WelcomeMessage />
+    <div style={{ padding: '20px' }}>
+      <h1>Recipe Sharing App</h1>
+      <AddRecipeForm />
+      <RecipeList />
     </div>
   );
 }
-
-return (
-    <div>
-      <Header />
-      <MainContent />
-      <Footer />
-    </div>
-  );
-
-   return (
-    <div>
-      <UserProfile 
-        name="Alice" 
-        age="25" 
-        bio="Loves hiking and photography" 
-      />
-    </div>
-  );
 
 export default App;
