@@ -1,17 +1,7 @@
-// src/services/githubService.js
 import axios from "axios";
 
-// Basic API call for a single user
-export const fetchUserData = async (username) => {
-  try {
-    const response = await axios.get(`https://api.github.com/users/${username}`);
-    return response.data;
-  } catch (error) {
-    throw new Error("Error fetching user data");
-  }
-};
+const BASE_URL = "https://api.github.com/search/users";
 
-// Advanced Search (optional for later task)
 export const fetchAdvancedUserSearch = async (username, location, minRepos) => {
   let query = "";
 
@@ -20,12 +10,9 @@ export const fetchAdvancedUserSearch = async (username, location, minRepos) => {
   if (minRepos) query += `repos:>=${minRepos} `;
 
   try {
-    const response = await axios.get(
-      `https://api.github.com/search/users?q=${encodeURIComponent(query)}`
-    );
+    const response = await axios.get(`${BASE_URL}?q=${encodeURIComponent(query)}`);
     return response.data;
   } catch (error) {
-    throw new Error("Error fetching advanced search results");
+    throw new Error("Error fetching users");
   }
 };
-
