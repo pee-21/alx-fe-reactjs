@@ -19,6 +19,13 @@ function App() {
     </div>
   );
 }
+ return (
+    <div>
+      <h1 style={{ textAlign: "center" }}>GitHub User Search</h1>
+      <Search />
+    </div>
+  );
+
 
 export default App;
 
